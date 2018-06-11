@@ -39,6 +39,65 @@ class CipFastGraphApi extends ApiBase {
 
 				break;
 			case 'second':
+
+				$config = array('flat_prop_vals'=>true);
+				$sqi = new \SQI\SemanticQueryInterface($config);
+
+				$resultAr = array(
+					'unknown' => 0,
+					'1 to 10' => 0,
+					'11 to 30' => 0,
+					'31 to 50' => 0,
+					'51 to 200' => 0,
+					'> 200' => 0,
+				);
+
+				$resultAr['unknown'] =$sqi->category('Climate initiative ')
+				    ->condition('Total members', 0)
+					->count();
+
+				$sqi->reset($config);
+
+				$resultAr['1 to 10'] =$sqi->category('Climate initiative ')
+				                          ->condition('Total members', 0, SMW_CMP_GRTR)
+				                          ->condition('Total members', 11, SMW_CMP_LESS)
+				                          ->count();
+
+				$sqi->reset($config);
+
+				$resultAr['11 to 30'] =$sqi->category('Climate initiative ')
+				                          ->printout('Total members')
+				                          ->condition('Total members', '10', SMW_CMP_GRTR)
+				                          ->condition('Total members', '30', SMW_CMP_LEQ)
+				                          ->count();
+
+				$sqi->reset($config);
+
+				$resultAr['31 to 50'] =$sqi->category('Climate initiative ')
+				                          ->printout('Total members')
+				                          ->condition('Total members', '30', SMW_CMP_GRTR)
+				                          ->condition('Total members', '50', SMW_CMP_LEQ)
+				                          ->count();
+
+				$sqi->reset($config);
+
+				$resultAr['51 to 200'] =$sqi->category('Climate initiative ')
+				                          ->printout('Total members')
+				                          ->condition('Total members', '50', SMW_CMP_GRTR)
+				                          ->condition('Total members', '200', SMW_CMP_LEQ)
+				                          ->count();
+
+				$sqi->reset($config);
+
+				$resultAr['> 200'] =$sqi->category('Climate initiative ')
+				                          ->printout('Total members')
+				                          ->condition('Total members', '200', SMW_CMP_GRTR)
+				                          ->count();
+
+				foreach ($resultAr as $k => $v) {
+					$formattedData['result'][] = array($k, $v, 'ICIs: '.$v);
+				}
+
 				break;
 		}
 

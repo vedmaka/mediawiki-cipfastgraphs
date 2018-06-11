@@ -31,4 +31,26 @@ class CipFastGraphs
 
 	}
 
+	/**
+	 * @param        $input
+	 * @param        $args
+	 * @param Parser $parser
+	 * @param        $frame
+	 *
+	 * @return array
+	 */
+	public static function cipgraph2( $input, $args, $parser, $frame ) {
+
+		global $wgOut;
+		$parser->getOutput()->addModules('ext.cipfastgraphs.foo');
+
+		$html = '<div id="cipgraph2">Graph is being loaded..</div>';
+
+		return array(
+			$html,
+			'markerType' => 'nowiki'
+		);
+
+	}
+
 }

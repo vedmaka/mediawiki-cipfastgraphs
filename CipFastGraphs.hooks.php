@@ -22,6 +22,7 @@ class CipFastGraphsHooks
 	public static function onParserFirstCallInit( $parser )
 	{
 		$parser->setHook('cipgraph1', 'CipFastGraphs::cipgraph1');
+		$parser->setHook('cipgraph2', 'CipFastGraphs::cipgraph2');
 	}
 
 	public static function onBeforePageDisplay( $out, $skin ) {
