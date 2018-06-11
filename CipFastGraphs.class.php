@@ -22,7 +22,7 @@ class CipFastGraphs
 		global $wgOut;
 		$parser->getOutput()->addModules('ext.cipfastgraphs.foo');
 
-		$html = '<div id="cipgraph1">Loading..</div>';
+		$html = '<div id="cipgraph1">Graph is being loaded..</div>';
 
 		return array(
 			$html,
