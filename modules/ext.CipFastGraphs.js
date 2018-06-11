@@ -19,7 +19,7 @@ $(function(){
 			data.addRows(result.cipfastgraphs.result);
 
 			var options = {
-				title: 'Number of Initiatives launched per year',
+				title: '',
 				hAxis: {
 					title: 'Year',
                     format: '#'
