@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Gomoko"
+    ]
+  },
+  "cipfastgraphs-desc": "Voici un exemple d'extension",
+  "cipfastgraphs-i18n-welcome": "Bienvenue dans le fichier de localisation de l'extension passepartout."
+}

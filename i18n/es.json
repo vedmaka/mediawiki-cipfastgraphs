@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Armando-Martin"
+    ]
+  },
+  "cipfastgraphs-desc": "Esta es una extensión de ejemplo",
+  "cipfastgraphs-i18n-welcome": "Bienvenido al archivo de localización de la extensión de CipFastGraphs."
+}

@@ -1,0 +1,56 @@
+{
+	"name": "CipFastGraphs",
+	"version": "0.0.1",
+	"author": [
+		"Jon Anderton"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:CipFastGraphs",
+	"descriptionmsg": "cipfastgraphs-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+        "CipFastGraphs": "CipFastGraphs.class.php",
+		"CipFastGraphsHooks": "CipFastGraphs.hooks.php",
+		"CipFastGraphApi": "includes/CipFastGraphApi.php"
+	},
+	"config": {
+		"CipFastGraphsEnableFoo": true
+	},
+	"callback": "CipFastGraphsHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"CipFastGraphsAlias": "CipFastGraphs.i18n.alias.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"CipFastGraphsHooks::onParserFirstCallInit"
+		],
+		"BeforePageDisplay": [
+			"CipFastGraphsHooks::onBeforePageDisplay"
+		]
+	},
+	"MessagesDirs": {
+		"CipFastGraphs": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.cipfastgraphs.foo": {
+			"scripts": [
+				"modules/ext.CipFastGraphs.js",
+				"modules/ext.CipFastGraphs.foo.js"
+			],
+			"styles": [
+				"modules/ext.CipFastGraphs.foo.css"
+			],
+			"position": "bottom"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "CipFastGraphs"
+	},
+	"APIModules": {
+		"cipfastgraphs": "CipFastGraphApi"
+	},
+	"manifest_version": 1
+}

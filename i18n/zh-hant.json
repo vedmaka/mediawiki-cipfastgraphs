@@ -1,0 +1,10 @@
+{
+  "@metadata": {
+    "authors": [
+      "Kevinhksouth",
+      "Simon Shek"
+    ]
+  },
+  "cipfastgraphs-desc": "這是一個示例擴展",
+  "cipfastgraphs-i18n-welcome": "歡迎使用 CipFastGraphs 擴充套件的本地語系檔案。"
+}

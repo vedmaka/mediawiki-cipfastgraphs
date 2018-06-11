@@ -1,0 +1,7 @@
+{
+  "@metadata": {
+    "authors": []
+  },
+  "cipfastgraphs-desc": "This is an example extension",
+  "cipfastgraphs-i18n-welcome": "Welcome to the localization file of the CipFastGraphs extension."
+}

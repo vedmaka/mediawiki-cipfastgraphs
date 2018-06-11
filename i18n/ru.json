@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "DCamer"
+    ]
+  },
+  "cipfastgraphs-desc": "Это пример расширения",
+  "cipfastgraphs-i18n-welcome": "Добро пожаловать в файл локализации расширения CipFastGraphs."
+}

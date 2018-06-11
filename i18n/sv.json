@@ -1,0 +1,10 @@
+{
+  "@metadata": {
+    "authors": [
+      "Jopparn",
+      "LittleGun"
+    ]
+  },
+  "cipfastgraphs-desc": "Detta är ett exempel-tillägg",
+  "cipfastgraphs-i18n-welcome": "Välkommen till CipFastGraphs-tilläggets lokaliseringsfil."
+}
