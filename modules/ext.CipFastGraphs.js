@@ -25,9 +25,16 @@ $(function(){
 
 			var options = {
 				title: '',
+				bar: {groupWidth: "90%"},
 				hAxis: {
 					title: 'Year',
-                    format: '#'
+                    format: '#',
+					/*direction:-1,
+					slantedText: true,
+					slantedTextAngle: 90,*/
+					textStyle : {
+						fontSize: 10 // or the number you want
+					}
 				},
 				vAxis: {
 					title: 'ICIs'
@@ -35,7 +42,7 @@ $(function(){
                 legend: {
 				    position: 'none'
                 },
-				chartArea: {'width': '85%', 'height': '80%'}
+				chartArea: {'width': '90%', 'height': '80%'}
 			};
 
 			var chart = new google.visualization.ColumnChart(

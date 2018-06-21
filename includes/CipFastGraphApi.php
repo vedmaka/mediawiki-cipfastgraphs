@@ -19,7 +19,7 @@ class CipFastGraphApi extends ApiBase {
 				$sorted = array();
 				foreach ($result as $r) {
 					$year = $r["properties"]["Starting year n"];
-					if( !empty($year) && $year != "" && (int)$year >= 2000 ) {
+					if( !empty($year) && $year != "" && (int)$year >= 1980 ) {
 						if ( isset( $sorted[ $year ] ) ) {
 							$sorted[ $year ] ++;
 						} else {
